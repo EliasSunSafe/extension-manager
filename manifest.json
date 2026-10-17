@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "扩展管理器 Extension Manager",
+  "version": "1.0.0",
+  "description": "快速开关浏览器扩展并直达其设置页，支持单列/双列视图与详细/仅图标模式一键切换。",
+  "permissions": ["management", "storage"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "扩展管理器",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}

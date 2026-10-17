@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>扩展管理器</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header class="header">
+    <div class="title-row">
+      <h1 class="title">扩展管理器</h1>
+      <select id="filter" class="filter" title="按类型筛选">
+        <option value="all">全部</option>
+        <option value="extension">扩展</option>
+        <option value="theme">主题</option>
+        <option value="app">应用</option>
+      </select>
+    </div>
+
+    <div class="search-row">
+      <svg class="search-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <circle cx="11" cy="11" r="8"></circle>
+        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+      </svg>
+      <input id="search" type="text" class="search" placeholder="搜索名称或描述…" autocomplete="off">
+    </div>
+
+    <div class="toolbar">
+      <div class="segmented" role="group" aria-label="列数">
+        <button class="seg-btn" data-key="columns" data-value="single" title="单列视图">单列</button>
+        <button class="seg-btn" data-key="columns" data-value="double" title="双列视图">双列</button>
+      </div>
+      <div class="segmented" role="group" aria-label="显示方式">
+        <button class="seg-btn" data-key="density" data-value="detail" title="显示名称与简要描述">详细</button>
+        <button class="seg-btn" data-key="density" data-value="icons" title="仅显示图标">图标</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="list" class="list single detail" aria-live="polite"></main>
+
+  <footer class="footer">
+    <span id="counts" class="counts"></span>
+    <span class="hint">开关即生效 · 齿轮直达设置</span>
+  </footer>
+
+  <div id="toast" class="toast" hidden></div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
